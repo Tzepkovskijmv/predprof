@@ -12,6 +12,7 @@ for i in f:
     s=i.split(',')
     if int(s[3][:-1]) == 10:
         studens.append(studentiki())
+        studens[j].id = s[0]
         studens[j].fio = s[1]
         studens[j].score = int (s[4])
         j += 1
@@ -26,6 +27,6 @@ for i in range(len(studens)-1):
         j -= 1
     studens[j] = t
 
-print(studens[0].fio)
-print(studens[1].fio)
-print(studens[2].fio)
+print(studens[0].fio,studens[0].id,studens[0].score)
+print(studens[1].fio,studens[1].id,studens[1].score)
+print(studens[2].fio,studens[2].id,studens[2].score)
