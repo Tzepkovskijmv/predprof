@@ -22,7 +22,7 @@ for i in range(len(studens)-1):
     t = studens[i]
     st = studens[i].score
     sid=studens[i].id
-    while j>0 and studens[j-1].score>st and studens[j-1].id>sid:
+    while j>0 and studens[j-1].score<st and studens[j-1].id<sid:
         studens[j] = studens[j-1]
         j -= 1
     studens[j] = t
